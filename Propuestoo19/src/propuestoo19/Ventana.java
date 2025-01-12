@@ -54,8 +54,18 @@ public class Ventana extends javax.swing.JFrame {
         jLabel4.setText("Perimetro");
 
         btnCalcular.setText("Calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,6 +130,35 @@ public class Ventana extends javax.swing.JFrame {
     private void txtHipotenusaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHipotenusaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHipotenusaActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        int lado;
+        double area, hipotenusa, perimetro;
+        
+        lado = Integer.parseInt(txtLado.getText());
+        Tequilatero triangulo = new Tequilatero(lado);
+        area = triangulo.CalcularArea();
+        hipotenusa = triangulo.CalcularHipotenusa();
+        perimetro = triangulo.CalcularPerimetro();
+        
+        txtArea.setText(String.valueOf(area));
+        txtHipotenusa.setText(String.valueOf(hipotenusa));
+        txtPerimetro.setText(String.valueOf(perimetro));
+        
+        
+        
+    }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        txtLado.setText("");
+        txtArea.setText("");
+        txtHipotenusa.setText("");
+        txtPerimetro.setText("");
+        
+             
+        
+        
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
