@@ -1,8 +1,5 @@
-package figurasx;
-/**
- *
- * @author david
- */
+public package figurasx;
+
 public class SampleFormFiguras extends javax.swing.JFrame {
     
     private PlCirculo objCirculo = new PlCirculo();
@@ -47,7 +44,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
      */
             
 }
-    }
+    
 
 
     /**
@@ -66,7 +63,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
         JRombo = new javax.swing.JInternalFrame();
         JTrapecio = new javax.swing.JInternalFrame();
         menuBar = new javax.swing.JMenuBar();
-        fileMenu = new javax.swing.JMenu();
+        Figurasx = new javax.swing.JMenu();
         jmiCirculo = new javax.swing.JMenuItem();
         jmiCuadrado = new javax.swing.JMenuItem();
         jmiRectangulo = new javax.swing.JMenuItem();
@@ -167,8 +164,8 @@ public class SampleFormFiguras extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        fileMenu.setMnemonic('f');
-        fileMenu.setText("Figuras");
+        Figurasx.setMnemonic('f');
+        Figurasx.setText("Figuras");
 
         jmiCirculo.setMnemonic('o');
         jmiCirculo.setText("Circulo");
@@ -177,7 +174,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiCirculoActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiCirculo);
+        Figurasx.add(jmiCirculo);
 
         jmiCuadrado.setMnemonic('s');
         jmiCuadrado.setText("Cuadrado");
@@ -186,7 +183,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiCuadradoActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiCuadrado);
+        Figurasx.add(jmiCuadrado);
 
         jmiRectangulo.setMnemonic('a');
         jmiRectangulo.setText("Rectangulo");
@@ -195,7 +192,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiRectanguloActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiRectangulo);
+        Figurasx.add(jmiRectangulo);
 
         jmiTrianguloR.setText("Triangulo Rectangulo");
         jmiTrianguloR.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +200,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiTrianguloRActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiTrianguloR);
+        Figurasx.add(jmiTrianguloR);
 
         jmiRombo.setText("Rombo");
         jmiRombo.addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +208,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiRomboActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiRombo);
+        Figurasx.add(jmiRombo);
 
         jmiTrapecio.setText("Trapecio");
         jmiTrapecio.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +216,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiTrapecioActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiTrapecio);
+        Figurasx.add(jmiTrapecio);
 
         jmiSalir.setMnemonic('x');
         jmiSalir.setText("Salir");
@@ -228,9 +225,9 @@ public class SampleFormFiguras extends javax.swing.JFrame {
                 jmiSalirActionPerformed(evt);
             }
         });
-        fileMenu.add(jmiSalir);
+        Figurasx.add(jmiSalir);
 
-        menuBar.add(fileMenu);
+        menuBar.add(Figurasx);
 
         setJMenuBar(menuBar);
 
@@ -309,7 +306,7 @@ public class SampleFormFiguras extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -342,13 +339,13 @@ public class SampleFormFiguras extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Figurasx;
     private javax.swing.JInternalFrame JCirculo;
     private javax.swing.JInternalFrame JCuadrado;
     private javax.swing.JInternalFrame JRectangulo;
     private javax.swing.JInternalFrame JRombo;
     private javax.swing.JInternalFrame JTrapecio;
     private javax.swing.JInternalFrame JTrianguloR;
-    private javax.swing.JMenu fileMenu;
     private javax.swing.JMenuItem jmiCirculo;
     private javax.swing.JMenuItem jmiCuadrado;
     private javax.swing.JMenuItem jmiRectangulo;
@@ -359,4 +356,4 @@ public class SampleFormFiguras extends javax.swing.JFrame {
     private javax.swing.JMenuBar menuBar;
     // End of variables declaration//GEN-END:variables
 
-}
+
