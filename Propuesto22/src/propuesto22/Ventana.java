@@ -30,12 +30,10 @@ public class Ventana extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         txtBasico = new javax.swing.JTextField();
         txtHoras = new javax.swing.JTextField();
         txtSalario = new javax.swing.JTextField();
-        txtNombres = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -48,8 +46,6 @@ public class Ventana extends javax.swing.JFrame {
         jLabel3.setText("Horas Trabajadas");
 
         jLabel4.setText("Salario");
-
-        jLabel5.setText("Nombres");
 
         txtBasico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,15 +79,13 @@ public class Ventana extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(119, 119, 119)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNombre)
+                            .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                             .addComponent(txtBasico)
                             .addComponent(txtHoras)
-                            .addComponent(txtSalario)
-                            .addComponent(txtNombres, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))
+                            .addComponent(txtSalario)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(jButton1)
@@ -118,11 +112,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -144,8 +134,7 @@ public class Ventana extends javax.swing.JFrame {
         nombre = String.valueOf(txtNombre.getText());
         salario_basico_hora = Double.parseDouble(txtSalario.getText());
         numero_horas_trabajadas = Double.parseDouble(txtHoras.getText());
-        salario_mensual = Empleado.calcular_salario_mensual(salario_basico_hora, numero_horas_trabajadas);
-        txtNombre.setText(String.valueOf(Empleado.set_Nombre(nombre)));
+        salario_mensual = Empleado.calcular_salario_mensual(salario_basico_hora, numero_horas_trabajadas);        
         txtSalario.setText(String.valueOf(salario_mensual));
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -156,7 +145,7 @@ public class Ventana extends javax.swing.JFrame {
         txtSalario.setText("");
         txtHoras.setText("");
         txtBasico.setText("");
-        txtNombres.setText("");
+
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -203,11 +192,9 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtBasico;
     private javax.swing.JTextField txtHoras;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtSalario;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,8 +22,5 @@ public class Empleado {
             }
                 
     }
-   public static String set_Nombre(String nombre) {
-       return nombre;
-   } 
-   
+
 }
